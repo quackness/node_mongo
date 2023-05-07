@@ -18,12 +18,21 @@ async function main() {
     assert.equal(data.length, getData.length);
     const filterData = await circulationRepo.get({ Newspaper: getData[4].Newspaper });
 <<<<<<< HEAD
+<<<<<<< HEAD
     assert.equal(filterData[0], getData[4]);
     const limitData = await circulationRepo.get({}, 3);
     assert.equal(limitData.length, 3)
 =======
     assert.deepEqual(filterData[0], getData[4]);
 >>>>>>> 564d16e (add test change)
+=======
+    assert.deepEqual(filterData[0], getData[4]);
+=======
+    assert.equal(filterData[0], getData[4]);
+    const limitData = await circulationRepo.get({}, 3);
+    assert.equal(limitData.length, 3)
+>>>>>>> fe8a1ea (add change)
+>>>>>>> ffbe16e (change test assert)
   } catch (error) {
     console.log(error)
   } finally {
